@@ -1,0 +1,16 @@
+.App {
+  text-align: center;
+}
+
+.product-flex {
+  display: flex;
+  justify-content: space-around;
+}
+
+.product-container {
+  width: 250px;
+}
+
+.product-image {
+  width: 250px;
+}
