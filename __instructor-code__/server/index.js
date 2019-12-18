@@ -27,6 +27,8 @@ app.post('/auth/register', authCtrl.register);
 app.post('/auth/logout', authCtrl.logout);
 
 app.get('/api/products', cartCtrl.getProducts);
+app.post('/api/cart', cartCtrl.addToCart);
+app.get('/api/cart/:id', cartCtrl.getCart);
 
 const port = SERVER_PORT || 4040;
 app.listen(port, () => console.log(`Memeing on ${port}`));

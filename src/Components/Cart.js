@@ -1,16 +1,20 @@
 import React, { Component } from 'react';
-
+import { connect } from 'react-redux';
+import AuthModal from './AuthModal';
 class Cart extends Component {
-    state = {
-        cart: []
-      }
-    render() {
-        return (
-            <div className="Cart">
-                Cart Component
-            </div>
-        );
-    }
+	state = {
+		cart: []
+	};
+	render() {
+		return (
+			<div className='Cart'>
+				{this.props.user ? <AuthModal /> : <div>Cart</div>}
+			</div>
+		);
+	}
 }
 
-export default Cart;
+const mapStateProps = reduxState => {
+	return reduxState;
+};
+export default connect(mapStateProps)(Cart);
